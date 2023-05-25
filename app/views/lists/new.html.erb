@@ -1,0 +1,6 @@
+<h1>Create a new list</h1>
+<p>Just time in your name for the list</p>
+<%= simple_form_for(@list) do |f| %>
+  <%= f.input :name %>
+  <%= f.submit %>
+<% end %>

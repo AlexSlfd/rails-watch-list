@@ -1,0 +1,9 @@
+<h1>Watch List</h1>
+<p>Here are your lists</p>
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
+<br>
+<button class='btn btn-primary'><%= link_to 'Create new list', lists_new_path %></button>
