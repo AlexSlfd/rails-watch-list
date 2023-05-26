@@ -2,5 +2,6 @@
 <p>Just time in your name for the list</p>
 <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>

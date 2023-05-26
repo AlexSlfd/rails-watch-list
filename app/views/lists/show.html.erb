@@ -1,5 +1,6 @@
 
 <h1><%= @list.name %></h1>
+<a href="#"><%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %></a>
 
 <div class='card' style="width: 35rem;">
   <% if @list.movies %>
@@ -23,3 +24,5 @@
 </div>
 
 <button><%= link_to 'Add new movie to list', new_bookmark_path %></button>
+<button><%= link_to 'Back', lists_path %></button>
+

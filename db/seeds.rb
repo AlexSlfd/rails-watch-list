@@ -10,6 +10,8 @@ require "open-uri"
 
 puts 'cleaning database'
 Movie.destroy_all
+List.destroy_all
+Bookmark.destroy_all
 
 
 url = 'https://tmdb.lewagon.com/movie/top_rated'
@@ -26,10 +28,13 @@ movies.each do |movie|
   )
 end
 
-List.create(name: 'Rainy Weekend')
-List.create(name: 'Perfect Datenight')
-List.create(name: 'Blockbuster Spectaculars')
-List.create(name: 'Laugh Out Loud: Hilarious Comedies')
-List.create(name: 'Films that Touch the Soul')
-List.create(name: 'Unforgettable Sobs')
-List.create(name: 'True Companions')
+
+# List.create(name: 'Rainy Weekend')
+# List.create(name: 'Perfect Datenight')
+# List.create(name: 'Timeless Classics')
+# List.create(name: 'Laugh Out Loud: Hilarious Comedies')
+# List.create(name: 'Films that Touch the Soul')
+# List.create(name: 'Unforgettable Sobs')
+# List.create(name: 'True Companions')
+
+# list.photo.attach(io: Cloudinary::Downloader.download("cloudinary_public_id/"), filename: )
