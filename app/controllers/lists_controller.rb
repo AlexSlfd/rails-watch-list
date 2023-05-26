@@ -9,7 +9,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
-    # @bookmarks = Bookmark.where(params[:id])
+    # @bookmark = @list.bookmark
     # @list.movies = @bookmarks.movie
   end
 

@@ -1,9 +1,11 @@
-<h1>Watch List</h1>
-<p>Here are your lists</p>
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<div id="banner">
+  <h1>WATCH LIST</h1>
+  <a href="#"><%= link_to 'new list', lists_new_path %></a>
+</div>
+<% @lists.each do |list| %>
+<div class="card">
+  <a href="#"><%= link_to list.name, list_path(list) %></a>
+  <h1><%= link_to list.name.upcase, list_path(list) %></h1>
+</div>
+<% end %>
 <br>
-<button class='btn btn-primary'><%= link_to 'Create new list', lists_new_path %></button>

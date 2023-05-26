@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post 'lists', to: 'lists#create'
   get 'lists/:id/bookmarks/new', to: 'bookmarks#new', as: 'new_bookmark'
   post 'lists/:id/bookmarks', to: 'bookmarks#create', as: 'list_bookmarks'
+  resources :bookmarks, only: [:destroy]
 end
 
 # A user can see all the lists
